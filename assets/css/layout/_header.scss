@@ -1,0 +1,87 @@
+.header-area {
+  // position: absolute;
+  padding: 10px 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background: linear-gradient(
+    -70deg,
+    $primaryColorGreen 0%,
+    $secondaryColorBlue 80%,
+    $primaryColorGold 100%
+  );
+  .navbar {
+    padding: 0;
+    .navbar-toggler {
+      font-size: 24px;
+      .navbar-toggler-icon {
+        color: $white;
+        font-size: 32px;
+        height: auto;
+      }
+      &[aria-expanded="true"] {
+        .fa-bars {
+          &::before {
+            content: "\f00d";
+          }
+        }
+      }
+      &[aria-expanded="false"] {
+        .fa-bars {
+          &::before {
+            content: "\f0c9";
+          }
+        }
+      }
+    }
+    .navbar-brand {
+      img {
+        width: 100%;
+        max-width: 170px;
+        @include md {
+          max-width: 150px;
+        }
+        @include sm {
+          max-width: 120px;
+        }
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-family: $secondaryFont;
+          font-weight: 900;
+          color: $white;
+          font-size: 20px;
+          padding: 10px 20px;
+          transition: all 0.3s ease;
+          &:hover {
+            color: lighten($primaryColorGold,5);
+          }
+        }
+      }
+      &.top-menu {
+        .nav-item {
+          .nav-link {
+            font-size: 16px;
+            @include md{
+              font-size: 20px;
+            }
+            @include sm{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      &.flex-row{
+        @include md{
+          flex-direction: column !important;
+        }
+        @include sm{
+          flex-direction: column !important;
+        }
+      }
+    }
+  }
+}
