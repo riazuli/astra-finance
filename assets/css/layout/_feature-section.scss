@@ -1,0 +1,42 @@
+.feature-secton{
+  .single-feature{
+    text-align: center;
+    padding: 20px;
+    .icon{
+      background: url(../img/line.png) repeat-x center center;
+      margin-bottom: 20px;
+    }
+  }
+  .col-lg-4{
+    &:first-of-type{
+      .single-feature{
+        .icon{
+          background: url(../img/line.png) no-repeat center right;
+          @include md{
+            background-repeat: repeat-x;
+            background-position: center center;
+          }
+          @include sm{
+            background-repeat: repeat-x;
+            background-position: center center;
+          }
+        }
+      }
+    }
+    &:last-of-type{
+      .single-feature{
+        .icon{
+          background: url(../img/line.png) no-repeat center left; 
+          @include md{
+            background-repeat: repeat-x;
+            background-position: center center;
+          }
+          @include sm{
+            background-repeat: repeat-x;
+            background-position: center center;
+          }
+        }
+      }
+    }
+  }
+}

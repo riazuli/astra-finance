@@ -1,13 +1,4 @@
-@import url("https://p.typekit.net/p.css?s=1&k=xdw5gnv&ht=tk&f=37171.37177.37178.37179.37180.37181.37182&a=20574441&app=typekit&e=css");
-
-@font-face {
-  font-family: "Majesti Banner";
-  src: url("../webfonts/MajestiBanner-Heavy.woff2") format("woff2"),
-    url("../webfonts/MajestiBanner-Heavy.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
 
 html,
 body {
@@ -20,7 +11,7 @@ body {
   color: $secondaryColorBlack;
   font-weight: 400;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 img {
@@ -76,36 +67,20 @@ button:focus {
   text-align: center;
   margin-bottom: 50px;
   @include md {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   @include sm {
     margin-bottom: 30px;
   }
   h2 {
-    padding-top: 25px;
-    font-size: 45px;
+    font-size: 36px;
     position: relative;
+    color: $secondaryColorNavy;
     @include md {
-      font-size: 40px;
-    }
-    @include sm {
       font-size: 28px;
     }
-    &:before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 150px;
-      height: 3px;
-      transform: translateX(-50%);
-      background: linear-gradient(
-        90deg,
-        $primaryColorGold 0%,
-        lighten($primaryColorGreen, 10) 22%,
-        lighten($primaryColorGreen, 20) 52%,
-        $secondaryColorBlue 100%
-      );
+    @include sm {
+      font-size: 24px;
     }
   }
 }
@@ -114,16 +89,33 @@ button:focus {
   display: inline-block;
   text-align: center;
   padding: 12px 25px;
-  background-color: $primaryColorGreen;
+  background-color: transparent;
   color: $white;
   font-weight: bold;
   border-radius: 5px;
   transition: all 0.3s ease;
+  min-width: 220px;
+  position: relative;
+  border: 2px solid $primaryColorBlue;
+  z-index: 1;
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primaryColorBlue;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: all 0.3s ease-out;
+    z-index: -1;
+  }
   &.white {
     background-color: $white;
-    color: $primaryColorGreen;
+    color: $primaryColorBlue;
     &:hover {
-      background-color: $secondaryColorBlue;
+      background-color: transparent;
       color: $white;
     }
   }
@@ -133,8 +125,11 @@ button:focus {
     margin-top: 10px;
   }
   &:hover {
-    background-color: $secondaryColorBlue;
+    background-color: transparent;
     color: $white;
+    &:before{
+      transform: scaleX(1);
+    }
   }
 }
 .gradient-button{
@@ -143,34 +138,21 @@ button:focus {
   padding: 8px 20px;
   display: inline-block;
   border-radius: 5px;
-  background: linear-gradient(90deg, lighten($primaryColorGreen, 10) 0%, $primaryColorGold 100%);
+  background: linear-gradient(90deg, lighten($primaryColorBlue, 10) 0%, $primaryColorYellow 100%);
   color: $white;
   font-weight: 700;
   transition: all 0.3s ease;
   &:hover{
     color: $white;
-    background: linear-gradient(-90deg, lighten($primaryColorGreen, 10) 0%, $primaryColorGold 100%);
+    background: linear-gradient(-90deg, lighten($primaryColorBlue, 10) 0%, $primaryColorYellow 100%);
   }
 }
 .inline-link{
   display: inline-block;
-  color: $secondaryColorBlue;
+  color: $primaryColorBlue;
   transition: all 0.3s ease;
   &:hover{
-    color: $primaryColorGreen;
+    color: $secondaryColorNavy;
     text-decoration: underline;
-  }
-}
-
-.gradient-band{
-  padding: 30px 0px;
-  margin-bottom: 30px;
-  background: $primaryColorGreen;
-  background: -moz-linear-gradient(180deg, rgba(0,193,149,0.3) 30%, rgba(2,127,195,0) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(0,193,149,0.3) 30%, rgba(2,127,195,0) 100%);
-  background: linear-gradient(180deg, rgba(0,193,149,0.3) 30%, rgba(2,127,195,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c195",endColorstr="#027fc3",GradientType=1);
-  @include sm{
-    padding: 25px 0px;
   }
 }
