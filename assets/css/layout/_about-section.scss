@@ -1,0 +1,91 @@
+.about-section {
+  .section-title {
+    margin-bottom: 20px;
+    h2{
+      @include md{
+        font-size: 30px;
+      }
+    }
+  }
+  .about-text {
+    border-left: 1px solid $secondaryColorBlack;
+    padding-left: 20px;
+    @include sm{
+      margin-top: 30px;
+    }
+    a {
+      color: $primaryColorBlue;
+    }
+    .signature {
+      max-width: 200px;
+    }
+  }
+  .about-details{
+    padding-top: 40px;
+    .single-about{
+      position: relative;
+      padding-left: 90px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      .title{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0;
+        color: $primaryColorBlue;
+      }
+      .icon{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70px;
+        height: 60px;
+        font-size: 40px;
+        color: $secondaryColorNavy;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .roll-icon{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+      }
+      .roll-icon-1{
+        background-image: url(../img/roll-icon/about-roll-1.png);
+      }
+      .roll-icon-2{
+        background-image: url(../img/roll-icon/about-roll-2.png);
+      }
+      .roll-icon-3{
+        background-image: url(../img/roll-icon/about-roll-3.jpg);
+      }
+      .roll-icon-4{
+        background-image: url(../img/roll-icon/about-roll-4.jpg);
+      }
+      .roll-icon-5{
+        background-image: url(../img/roll-icon/about-roll-5.jpg);
+      }
+      .roll-icon-6{
+        background-image: url(../img/roll-icon/about-roll-6.jpg);
+      }
+      .roll-icon-7{
+        background-image: url(../img/roll-icon/about-roll-7.jpg);
+      }
+      .roll-icon-8{
+        background-image: url(../img/roll-icon/about-roll-8.jpg);
+      }
+      &:hover{
+        .roll-icon{
+          background-position: center top;
+        }
+        .icon{
+          color: $primaryColorBlue;
+        }
+      }
+    }
+  }
+}

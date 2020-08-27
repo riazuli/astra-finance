@@ -1,0 +1,46 @@
+.footer-section {
+  .footer-top {
+    padding: 20px 0px;
+    text-align: center;
+    .text-left{
+      @include sm{
+        text-align: center !important;
+      }
+    }
+    .site-logo {
+      max-width: 150px;
+    }
+    img{
+      padding: 15px;
+    }
+  }
+  .footer {
+    background: $offwhiteColor;
+    padding: 20px 0px;
+    color: lighten($secondaryColorBlack, 30);
+    font-size: 14px;
+    @include sm{
+      text-align: center;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        a {
+          color: lighten($secondaryColorBlack, 30);
+          padding: 5px;
+          transition: all 0.3s ease;
+          font-size: 14px;
+          @include sm{
+            padding: 10px;
+          }
+          &:hover {
+            color: $primaryColorBlue;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.case-study-section {
+  background-image: url(../img/well-define-bg.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  padding-bottom: 120px;
+  @include sm {
+    background-position: center center;
+  }
+  .single-case-study {
+    text-align: center;
+    color: $white;
+    padding: 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    @include sm {
+      padding: 10px;
+    }
+    &:hover {
+      border: 2px solid $primaryColorBlue;
+      background-color: rgba(32, 143, 191, 0.4);
+    }
+    img {
+      max-width: 160px;
+      border-radius: 50%;
+      border: 1px solid $primaryColorBlue;
+      margin-bottom: 15px;
+    }
+    h4 {
+      span {
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: 400;
+        display: block;
+      }
+    }
+  }
+}

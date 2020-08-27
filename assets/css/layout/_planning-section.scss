@@ -1,0 +1,36 @@
+.planning-section {
+  .service-list {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    @include md {
+      text-align: left;
+    }
+    @include sm {
+      text-align: left;
+      font-size: 14px;
+    }
+    i.fa {
+      color: $primaryColorBlue;
+      margin-right: 5px;
+    }
+  }
+  .trust-block {
+    padding: 45px 0px 30px;
+    margin-top: 30px;
+    border-top: 1px dotted $secondaryColorNavy;
+    border-bottom: 1px dotted $secondaryColorNavy;
+    @include sm {
+      padding: 25px 0px 10px;
+    }
+    p {
+      text-align: right;
+      font-size: 14px;
+      margin-bottom: 0;
+      @include sm {
+        text-align: center;
+      }
+    }
+  }
+}

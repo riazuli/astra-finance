@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
 
 html,
 body {
@@ -7,11 +7,15 @@ body {
   position: relative;
 }
 body {
+  padding-top: 109px;
   font-family: $primaryFont;
   color: $secondaryColorBlack;
   font-weight: 400;
   line-height: 1.5;
   font-size: 15px;
+  @include sm{
+    padding-top: 97px;
+  }
 }
 
 img {
@@ -41,13 +45,13 @@ select:focus,
 button:focus {
   outline: 0 solid;
 }
-.spacer-20{
+.spacer-20 {
   height: 20px;
 }
-.spacer-30{
+.spacer-30 {
   height: 30px;
 }
-.spacer-40{
+.spacer-40 {
   height: 40px;
 }
 .section-padding {
@@ -72,15 +76,26 @@ button:focus {
   @include sm {
     margin-bottom: 30px;
   }
+  .icon {
+    font-size: 50px;
+    color: $primaryColorBlue;
+    margin-bottom: 15px;
+  }
   h2 {
     font-size: 36px;
     position: relative;
     color: $secondaryColorNavy;
     @include md {
-      font-size: 28px;
+      font-size: 32px;
     }
     @include sm {
-      font-size: 24px;
+      font-size: 28px;
+    }
+  }
+  &.white {
+    color: $white;
+    h2 {
+      color: $white;
     }
   }
 }
@@ -88,7 +103,7 @@ button:focus {
 .primary-button {
   display: inline-block;
   text-align: center;
-  padding: 12px 25px;
+  padding: 10px 25px;
   background-color: transparent;
   color: $white;
   font-weight: bold;
@@ -97,8 +112,12 @@ button:focus {
   min-width: 220px;
   position: relative;
   border: 2px solid $primaryColorBlue;
+  font-family: $secondaryFont;
   z-index: 1;
-  &::before{
+  @include sm{
+    min-width: 160px;
+  }
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -124,35 +143,91 @@ button:focus {
     display: block;
     margin-top: 10px;
   }
+  &.black{
+    color: $secondaryColorBlack;
+  }
+  &.color{
+    color: $primaryColorBlue;
+  }
+  &.colored {
+    background-color: $primaryColorBlue;
+    &:hover {
+      color: $secondaryColorNavy;
+      background-color: $primaryColorYellow;
+      border-color: $primaryColorYellow;
+      &::before {
+        transform: scaleX(0);
+      }
+    }
+  }
   &:hover {
     background-color: transparent;
     color: $white;
-    &:before{
+    &:before {
       transform: scaleX(1);
     }
   }
 }
-.gradient-button{
+.gradient-button {
   border: 0px;
   min-width: 150px;
   padding: 8px 20px;
   display: inline-block;
   border-radius: 5px;
-  background: linear-gradient(90deg, lighten($primaryColorBlue, 10) 0%, $primaryColorYellow 100%);
+  background: linear-gradient(
+    90deg,
+    lighten($primaryColorBlue, 10) 0%,
+    $primaryColorYellow 100%
+  );
   color: $white;
   font-weight: 700;
   transition: all 0.3s ease;
-  &:hover{
+  &:hover {
     color: $white;
-    background: linear-gradient(-90deg, lighten($primaryColorBlue, 10) 0%, $primaryColorYellow 100%);
+    background: linear-gradient(
+      -90deg,
+      lighten($primaryColorBlue, 10) 0%,
+      $primaryColorYellow 100%
+    );
   }
 }
-.inline-link{
+.inline-link {
   display: inline-block;
   color: $primaryColorBlue;
   transition: all 0.3s ease;
-  &:hover{
+  &:hover {
     color: $secondaryColorNavy;
     text-decoration: underline;
+  }
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: $white;
+  h4 {
+    text-transform: uppercase;
+    padding: 0px 15px;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 100%;
+    margin: 0;
+    flex: 0 1 auto;
+  }
+  .separator-holder {
+    height: 1px;
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 10%;
+    .separator-line {
+      height: 1px;
+      border-top: 1px solid lighten($primaryColorYellow, 30);
+      display: block;
+      position: relative;
+      top: 1px;
+      width: 100%;
+    }
   }
 }
