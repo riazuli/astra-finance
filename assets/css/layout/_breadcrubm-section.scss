@@ -1,3 +1,10 @@
-.breadcrubm-section{
+.breadcrubm-section {
   padding: 40px 0px;
+  &.bg {
+    background-color: $secondaryColorNavy;
+    background-image: url(../img/banner-img.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }

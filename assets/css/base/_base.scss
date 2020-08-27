@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
 
 html,
 body {
@@ -161,6 +161,11 @@ button:focus {
     display: block;
     margin-top: 10px;
   }
+  &.m-width{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
   &.black{
     color: $secondaryColorBlack;
   }
@@ -209,15 +214,6 @@ button:focus {
     );
   }
 }
-.inline-link {
-  display: inline-block;
-  color: $primaryColorBlue;
-  transition: all 0.3s ease;
-  &:hover {
-    color: $secondaryColorNavy;
-    text-decoration: underline;
-  }
-}
 
 .separator {
   display: flex;
@@ -247,5 +243,28 @@ button:focus {
       top: 1px;
       width: 100%;
     }
+  }
+}
+
+
+.list{
+  list-style: none;
+  li{
+    &::before {
+      content: "\2022"; 
+      color: $primaryColorBlue; 
+      font-weight: bold; 
+      display: inline-block; 
+      width: 1em; 
+      margin-left: -1em; 
+    }
+  }
+}
+.inline-link{
+  text-decoration: underline;
+  color: $primaryColorBlue;
+  transition: all 0.3s ease;
+  &:hover{
+    color: ligten($primaryColorYellow,10);
   }
 }

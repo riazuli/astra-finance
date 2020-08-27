@@ -1,0 +1,16 @@
+.why-section {
+  .why-text {
+    font-size: 18px;
+  }
+  .single-why {
+    padding: 10px;
+    margin: 20px 0px;
+    .icon {
+      font-size: 40px;
+      color: $primaryColorBlue;
+    }
+    h4 {
+      font-size: 20px;
+    }
+  }
+}

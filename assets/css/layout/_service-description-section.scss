@@ -1,0 +1,71 @@
+.service-description-section {
+  padding: 50px 0px;
+  background-color: lighten($offwhiteColor, 5);
+  .service-list {
+    background-color: $white;
+    padding: 40px;
+    margin-bottom: 20px;
+    @include sm{
+      padding: 20px;
+    }
+    h2 {
+      color: $secondaryColorNavy;
+      font-size: 28px;
+      @include sm{
+        font-size: 24px;
+      }
+    }
+    ul {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+      margin-top: 15px;
+      li {
+        display: block;
+        a {
+          display: block;
+          padding: 7px 15px;
+          margin-bottom: 5px;
+          font-size: 16px;
+          color: $primaryColorBlue;
+          font-weight: 700;
+          border-left: 2px solid transparent;
+          transition: all 0.3s ease;
+        }
+        &.active {
+          a {
+            border-left: 2px solid $primaryColorBlue;
+            color: $secondaryColorNavy;
+          }
+        }
+        &:hover {
+          a {
+            border-left: 2px solid $primaryColorBlue;
+            color: $secondaryColorNavy;
+          }
+        }
+      }
+    }
+  }
+
+  .service-description {
+    padding: 40px;
+    background-color: $white;
+    font-size: 18px;
+    @include sm{
+      padding: 20px;
+    }
+    h2 {
+      color: $secondaryColorNavy;
+      font-size: 28px;
+      @include sm{
+        font-size: 24px;
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 450px;
+    }
+  }
+}

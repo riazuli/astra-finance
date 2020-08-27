@@ -1,0 +1,26 @@
+.goodfit-section {
+  .single-fit {
+    position: relative;
+    padding: 20px 0px;
+    padding-left: 120px;
+    min-height: 120px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid $secondaryColorNavy;
+    display: flex;
+    align-items: center;
+    .icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      img{
+        max-width: 80px;
+      }
+    }
+    h4 {
+      font-size: 18px;
+      color: $secondaryColorNavy;
+    }
+  }
+}

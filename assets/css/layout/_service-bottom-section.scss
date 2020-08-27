@@ -1,0 +1,34 @@
+.service-bottom-section {
+  padding: 50px 0px;
+  background-color: $primaryColorBlue;
+  color: $white;
+  h2{
+    font-size: 30px;
+    @include sm{
+      font-size: 20px;
+    }
+  }
+  .service-list {
+    a {
+      display: inline-block;
+      color: $white;
+      transition: all 0.3s ease;
+      &:hover{
+        color: $primaryColorYellow;
+      }
+      &:after {
+        content: "\2022";
+        color: $white;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        text-align: center;
+      }
+      &:last-of-type{
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+}
