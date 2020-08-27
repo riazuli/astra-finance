@@ -98,6 +98,24 @@ button:focus {
       color: $white;
     }
   }
+  
+  &.bordered{
+    margin-bottom: 0;
+    h2{
+      position: relative;
+      padding-bottom: 15px;
+      &:after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 120px;
+        height: 2px;
+        background-color: $primaryColorBlue;
+      }
+    }
+  }
 }
 
 .primary-button {

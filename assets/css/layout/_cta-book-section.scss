@@ -57,4 +57,16 @@
       padding: 25px 15px;
     }
   }
+  &.colored{
+    background-color: $primaryColorBlue;
+    .cta-title {
+      color: $white;
+      h2 {
+        color: lighten($primaryColorYellow, 10);
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
 }

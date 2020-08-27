@@ -1,0 +1,26 @@
+.about-content-section{
+  padding: 50px 0px;
+  .about-content-text{
+    ol{
+      list-style: none;
+      li{
+        &::before {
+          content: "\2022"; 
+          color: $primaryColorBlue; 
+          font-weight: bold; 
+          display: inline-block; 
+          width: 1em; 
+          margin-left: -1em; 
+        }
+      }
+    }
+    a{
+      text-decoration: underline;
+      color: $primaryColorBlue;
+      transition: all 0.3s ease;
+      &:hover{
+        color: ligten($primaryColorYellow,10);
+      }
+    }
+  }
+}

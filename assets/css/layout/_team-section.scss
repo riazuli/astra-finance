@@ -1,0 +1,79 @@
+.team-section{
+  padding: 50px 0px;
+  background-color: lighten($offwhiteColor, 5);
+  .single-team-member{
+    margin: 20px 0px;
+    .member-image{
+      display: block;
+      position: relative;
+      margin-bottom: 20px;
+      .text-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        background-color: rgba(32, 143, 191, 0.4);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+        transition: all 0.3s ease;
+        i{
+          display: block;
+          font-size: 100px;
+          color: $white;
+          @include md{
+            font-size: 70px;
+          }
+          @include sm{
+            font-size: 50px;
+          }
+        }
+        span{
+          display: block;
+          font-weight: 700;
+          color: $white;
+          font-size: 40px;
+          
+          @include md{
+            font-size: 30px;
+          }
+          @include sm{
+            font-size: 20px;
+          }
+        }
+        &::before{
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          width: 95%;
+          height: 95%;
+          border: 4px solid $primaryColorBlue;
+        }
+      }
+      &:hover{
+        .text-content{
+          opacity: 1;
+        }
+      }
+    }
+    h3{
+      color: $secondaryColorNavy;
+      margin-bottom: 10px;
+      @include sm{
+        font-size: 24px;
+      }
+    }
+    h4{
+      font-size: 18px;
+      color: lighten($secondaryColorBlack, 15);
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+}
