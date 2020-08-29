@@ -1,5 +1,6 @@
 .cta-book-section {
   padding-top: 50px;
+  position: relative;
   @include sm {
     padding-top: 0;
   }
@@ -51,6 +52,18 @@
 
   &.colored {
     background-color: $primaryColorBlue;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-top: 50px solid $white;
+    }
     .cta-title {
       color: $white;
       h2 {

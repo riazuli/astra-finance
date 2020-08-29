@@ -1,4 +1,136 @@
+.astra-tabs {
+  @include md{
+    display: none;
+  }
+  @include sm{
+    display: none;
+  }
+  .nav {
+    .nav-item {
+      width: 100%;
+      .nav-link {
+        color: $secondaryColorBlack;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+        border: 0px;
+        font-size: 22px;
+        text-transform: uppercase;
+        background-color: $white;
+        border: 0px;
+        margin: 20px 0px;
+        position: relative;
+        padding-right: 40px;
+        transition: all 0.3s ease;
+        &::before {
+          position: absolute;
+          content: "";
+          right: -25px;
+          top: 50%;
+          width: 0;
+          height: 0;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-left: 25px solid transparent;
+          transform: translateY(-50%);
+          transition: all 0.3s ease;
+          opacity: 0;
+          @include sm {
+            top: 30px;
+          }
+        }
+        .number {
+          font-weight: 700;
+          font-size: 16px;
+        }
+        .letter {
+          border: 4px solid $secondaryColorNavy;
+          padding: 15px 20px;
+          display: inline-block;
+          margin-left: 20px;
+          margin-right: 10px;
+          position: relative;
+          color: $primaryColorBlue;
+          font-size: 28px;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          @include sm {
+            padding: 8px 15px;
+            font-size: 24px;
+          }
+          &:after {
+            position: absolute;
+            left: -24px;
+            top: 50%;
+            content: "";
+            width: 20px;
+            height: 1px;
+            background-color: $primaryColorBlue;
+          }
+        }
+        .title {
+          .green {
+            color: $primaryColorBlue;
+          }
+          @include sm {
+            font-size: 16px;
+            display: block;
+            margin-top: 15px;
+          }
+        }
+        &.active {
+          box-shadow: 0px 0px 21px $offwhiteColor;
+          &::before {
+            opacity: 1;
+            border-left: 25px solid $primaryColorBlue;
+          }
+          .letter {
+            border: 4px solid $primaryColorBlue;
+            background: $primaryColorBlue;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .styled-text {
+    font-size: 18px;
+    padding: 30px;
+    background-color: $white;
+    margin-top: 20px;
+    margin-left: 20px;
+    @include sm {
+      padding: 0px;
+      font-size: 14px;
+    }
+    h4 {
+      font-size: 22px;
+      span {
+        color: $white;
+        width: 40px;
+        height: 40px;
+        background-color: $primaryColorBlue;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
 .astra-accordion-styled {
+  display: none;
+  @include md{
+    display: block;
+  }
+  @include sm{
+    display: block;
+  }
   .card {
     border: 0px;
     .card-header {
@@ -31,7 +163,7 @@
           border-left: 20px solid $primaryColorBlue;
           transform: rotate(0);
           transition: all 0.3s ease;
-          @include sm{
+          @include sm {
             top: 30px;
           }
         }
@@ -50,7 +182,7 @@
           font-size: 28px;
           font-weight: 700;
           transition: all 0.3s ease;
-          @include sm{
+          @include sm {
             padding: 8px 15px;
             font-size: 24px;
           }
@@ -68,7 +200,7 @@
           .green {
             color: $primaryColorBlue;
           }
-          @include sm{
+          @include sm {
             font-size: 16px;
             display: block;
             margin-top: 15px;
@@ -89,7 +221,7 @@
     .styled-text {
       font-size: 18px;
       padding: 30px;
-      @include sm{
+      @include sm {
         padding: 0px;
         font-size: 14px;
       }
@@ -111,16 +243,15 @@
   }
 }
 
-
-.astra-accordion{
+.astra-accordion {
   margin-top: 40px;
   .card {
     border: 0px;
-    border-top: 1px solid lighten($secondaryColorNavy,10);
+    border-top: 1px solid lighten($secondaryColorNavy, 10);
     background: transparent;
     border-radius: 0;
-    &:last-of-type{
-      border-bottom: 1px solid lighten($secondaryColorNavy,10);
+    &:last-of-type {
+      border-bottom: 1px solid lighten($secondaryColorNavy, 10);
     }
     .card-header {
       padding: 0px;
@@ -154,7 +285,7 @@
         }
         &[aria-expanded="true"] {
           &::before {
-            content: "\2212";;
+            content: "\2212";
           }
         }
       }
@@ -162,7 +293,7 @@
     .styled-text {
       font-size: 18px;
       padding: 10px;
-      @include sm{
+      @include sm {
         padding: 0px;
         font-size: 14px;
       }
@@ -183,3 +314,4 @@
     }
   }
 }
+

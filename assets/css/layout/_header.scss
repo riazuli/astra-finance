@@ -85,7 +85,7 @@
               z-index: -1;
             }
             &:hover {
-              color: $secondaryColorBlack;
+              color: $primaryColorBlue;
               &:before {
                 transform: scaleX(0);
               }
@@ -165,6 +165,43 @@
         }
         @include sm {
           max-width: 90px;
+        }
+      }
+    }
+  }
+}
+
+.home {
+  padding-top: 0px;
+  .header-area {
+    background-color: transparent;
+    .navbar {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &.sticky {
+      background-color: $white;
+      .navbar {
+        .navbar-nav {
+          .nav-item {
+            .nav-link {
+              color: $secondaryColorBlack;
+            }
+            &.bordered {
+              .nav-link {
+                color: $white;
+                &:hover {
+                  color: $primaryColorBlue;
+                }
+              }
+            }
+          }
         }
       }
     }
